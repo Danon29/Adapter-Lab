@@ -3,32 +3,8 @@ using System.IO;
 using System.Collections.Generic;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace ConsoleApp2
+namespace Adapter
 {
-    interface ITarget
-    {
-        void AddToExcel();
-    }
-
-    class Adaptee_txt
-    {
-        public int count;
-        public List<string> list = new List<string>() { "1" };
-        public void Read_txt()
-        {
-            var path = @"C:\\Text.txt"; // Путь к произвольному текстовому файлу
-            var myList = File.ReadAllLines(path);
-            list.AddRange(myList);
-
-            for(int i = 0; i < count; i++)
-            {
-                list.Add(myList[i]);
-            }
-
-        }
-
-    }
-
 
     class Adapter_Excel : ITarget
     {
@@ -63,16 +39,7 @@ namespace ConsoleApp2
     }
 
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var kek = new Adaptee_txt();
-            kek.Read_txt();
-            var lol = new Adapter_Excel(kek);
-            lol.AddToExcel();
-        }
-    }
+    
     }
 
 
