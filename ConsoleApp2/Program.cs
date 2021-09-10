@@ -12,7 +12,7 @@ namespace Adapter
             var smth = new Adaptee_txt();
             smth.Read_txt(Console.ReadLine());
             var smth2 = new Adapter_Excel(smth);
-           // smth2.AddToExcel();
+            smth2.AddToExcel();
         }
     }
 }
