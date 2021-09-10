@@ -6,6 +6,6 @@ namespace Adapter
 {
     interface ITarget
     {
-        void AddToExcel();
+        void AddToExcel(List<string> smth);
     }
 }

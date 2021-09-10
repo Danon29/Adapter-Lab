@@ -14,6 +14,7 @@ namespace Adapter
             string path = _path; // Путь к произвольному текстовому файлу
             var myList = File.ReadAllLines(path);
             list.AddRange(myList);
+
             for (int i = 0; i < count; i++)
             {
                 list.Add(myList[i]);
