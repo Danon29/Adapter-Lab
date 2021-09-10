@@ -18,6 +18,7 @@ namespace Adapter
         public void AddToExcel()
         {
             string fileName = "C:\\chtoto.xlsx"; //имя Excel файла  
+           
             Excel.Application xlApp = new Excel.Application();
             Excel.Workbook xlWb = xlApp.Workbooks.Open(fileName); 
             Excel.Worksheet xlSht = xlWb.Sheets[1]; //первый лист в файле
